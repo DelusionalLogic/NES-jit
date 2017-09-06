@@ -1,0 +1,67 @@
+[
+  {
+    "directory": "/home/delusional/Documents/jit/build",
+    "command": "c++  -Isrc/jit@exe -Isrc -I../src -Iinclude -I../include -I/usr/include/SDL2  -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++1y -O0 -g -fpermissive -D_REENTRANT -isystem ../src/glad/include -MMD -MQ 'src/jit@exe/main.cpp.o' -MF 'src/jit@exe/main.cpp.o.d' -o 'src/jit@exe/main.cpp.o' -c ../src/main.cpp",
+    "file": "../src/main.cpp"
+  },
+  {
+    "directory": "/home/delusional/Documents/jit/build",
+    "command": "c++  -Isrc/jit@exe -Isrc -I../src -Iinclude -I../include -I/usr/include/SDL2  -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++1y -O0 -g -fpermissive -D_REENTRANT -isystem ../src/glad/include -MMD -MQ 'src/jit@exe/ines.cpp.o' -MF 'src/jit@exe/ines.cpp.o.d' -o 'src/jit@exe/ines.cpp.o' -c ../src/ines.cpp",
+    "file": "../src/ines.cpp"
+  },
+  {
+    "directory": "/home/delusional/Documents/jit/build",
+    "command": "c++  -Isrc/jit@exe -Isrc -I../src -Iinclude -I../include -I/usr/include/SDL2  -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++1y -O0 -g -fpermissive -D_REENTRANT -isystem ../src/glad/include -MMD -MQ 'src/jit@exe/instruction.cpp.o' -MF 'src/jit@exe/instruction.cpp.o.d' -o 'src/jit@exe/instruction.cpp.o' -c ../src/instruction.cpp",
+    "file": "../src/instruction.cpp"
+  },
+  {
+    "directory": "/home/delusional/Documents/jit/build",
+    "command": "c++  -Isrc/jit@exe -Isrc -I../src -Iinclude -I../include -I/usr/include/SDL2  -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++1y -O0 -g -fpermissive -D_REENTRANT -isystem ../src/glad/include -MMD -MQ 'src/jit@exe/mapper_memorymapper.cpp.o' -MF 'src/jit@exe/mapper_memorymapper.cpp.o.d' -o 'src/jit@exe/mapper_memorymapper.cpp.o' -c ../src/mapper/memorymapper.cpp",
+    "file": "../src/mapper/memorymapper.cpp"
+  },
+  {
+    "directory": "/home/delusional/Documents/jit/build",
+    "command": "c++  -Isrc/jit@exe -Isrc -I../src -Iinclude -I../include -I/usr/include/SDL2  -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++1y -O0 -g -fpermissive -D_REENTRANT -isystem ../src/glad/include -MMD -MQ 'src/jit@exe/mapper_filememorybank.cpp.o' -MF 'src/jit@exe/mapper_filememorybank.cpp.o.d' -o 'src/jit@exe/mapper_filememorybank.cpp.o' -c ../src/mapper/filememorybank.cpp",
+    "file": "../src/mapper/filememorybank.cpp"
+  },
+  {
+    "directory": "/home/delusional/Documents/jit/build",
+    "command": "c++  -Isrc/jit@exe -Isrc -I../src -Iinclude -I../include -I/usr/include/SDL2  -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++1y -O0 -g -fpermissive -D_REENTRANT -isystem ../src/glad/include -MMD -MQ 'src/jit@exe/mapper_remapmemorybank.cpp.o' -MF 'src/jit@exe/mapper_remapmemorybank.cpp.o.d' -o 'src/jit@exe/mapper_remapmemorybank.cpp.o' -c ../src/mapper/remapmemorybank.cpp",
+    "file": "../src/mapper/remapmemorybank.cpp"
+  },
+  {
+    "directory": "/home/delusional/Documents/jit/build",
+    "command": "c++  -Isrc/jit@exe -Isrc -I../src -Iinclude -I../include -I/usr/include/SDL2  -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++1y -O0 -g -fpermissive -D_REENTRANT -isystem ../src/glad/include -MMD -MQ 'src/jit@exe/mapper_rammemorybank.cpp.o' -MF 'src/jit@exe/mapper_rammemorybank.cpp.o.d' -o 'src/jit@exe/mapper_rammemorybank.cpp.o' -c ../src/mapper/rammemorybank.cpp",
+    "file": "../src/mapper/rammemorybank.cpp"
+  },
+  {
+    "directory": "/home/delusional/Documents/jit/build",
+    "command": "c++  -Isrc/jit@exe -Isrc -I../src -Iinclude -I../include -I/usr/include/SDL2  -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++1y -O0 -g -fpermissive -D_REENTRANT -isystem ../src/glad/include -MMD -MQ 'src/jit@exe/imgui_imgui.cpp.o' -MF 'src/jit@exe/imgui_imgui.cpp.o.d' -o 'src/jit@exe/imgui_imgui.cpp.o' -c ../src/imgui/imgui.cpp",
+    "file": "../src/imgui/imgui.cpp"
+  },
+  {
+    "directory": "/home/delusional/Documents/jit/build",
+    "command": "c++  -Isrc/jit@exe -Isrc -I../src -Iinclude -I../include -I/usr/include/SDL2  -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++1y -O0 -g -fpermissive -D_REENTRANT -isystem ../src/glad/include -MMD -MQ 'src/jit@exe/imgui_imgui_demo.cpp.o' -MF 'src/jit@exe/imgui_imgui_demo.cpp.o.d' -o 'src/jit@exe/imgui_imgui_demo.cpp.o' -c ../src/imgui/imgui_demo.cpp",
+    "file": "../src/imgui/imgui_demo.cpp"
+  },
+  {
+    "directory": "/home/delusional/Documents/jit/build",
+    "command": "c++  -Isrc/jit@exe -Isrc -I../src -Iinclude -I../include -I/usr/include/SDL2  -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++1y -O0 -g -fpermissive -D_REENTRANT -isystem ../src/glad/include -MMD -MQ 'src/jit@exe/imgui_imgui_draw.cpp.o' -MF 'src/jit@exe/imgui_imgui_draw.cpp.o.d' -o 'src/jit@exe/imgui_imgui_draw.cpp.o' -c ../src/imgui/imgui_draw.cpp",
+    "file": "../src/imgui/imgui_draw.cpp"
+  },
+  {
+    "directory": "/home/delusional/Documents/jit/build",
+    "command": "c++  -Isrc/jit@exe -Isrc -I../src -Iinclude -I../include -I/usr/include/SDL2  -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++1y -O0 -g -fpermissive -D_REENTRANT -isystem ../src/glad/include -MMD -MQ 'src/jit@exe/imgui_imgui_impl_sdl_gl3.cpp.o' -MF 'src/jit@exe/imgui_imgui_impl_sdl_gl3.cpp.o.d' -o 'src/jit@exe/imgui_imgui_impl_sdl_gl3.cpp.o' -c ../src/imgui/imgui_impl_sdl_gl3.cpp",
+    "file": "../src/imgui/imgui_impl_sdl_gl3.cpp"
+  },
+  {
+    "directory": "/home/delusional/Documents/jit/build",
+    "command": "cc  -Isrc/jit@exe -Isrc -I../src -Iinclude -I../include -I/usr/include/SDL2  -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -O0 -g -D_REENTRANT -isystem ../src/glad/include -MMD -MQ 'src/jit@exe/glad_src_glad.c.o' -MF 'src/jit@exe/glad_src_glad.c.o.d' -o 'src/jit@exe/glad_src_glad.c.o' -c ../src/glad/src/glad.c",
+    "file": "../src/glad/src/glad.c"
+  },
+  {
+    "directory": "/home/delusional/Documents/jit/build",
+    "command": "cc  -Isrc/jit@exe -Isrc -I../src -Iinclude -I../include -I/usr/include/SDL2  -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -O0 -g -D_REENTRANT -isystem ../src/glad/include -MMD -MQ 'src/jit@exe/fun.S.o' -MF 'src/jit@exe/fun.S.o.d' -o 'src/jit@exe/fun.S.o' -c ../src/fun.S",
+    "file": "../src/fun.S"
+  }
+]

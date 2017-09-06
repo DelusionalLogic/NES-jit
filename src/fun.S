@@ -20,7 +20,21 @@ jit_and_jump:
 	push %r10
 	push %r11
 
+	sub $0x8, %rsp
+	mov %r10b, (%rsp)
+	mov %r11b, 1(%rsp)
+	mov %r13b, 2(%rsp)
+	mov %r14b, 3(%rsp)
+	mov %r15b, 4(%rsp)
+	mov %rsp, %rsi
+
+	sub $0x8, %rsp
+
 	call jit
+
+	add $0x8, %rsp
+
+	add $0x8, %rsp
 
 	pop %r11
 	pop %r10

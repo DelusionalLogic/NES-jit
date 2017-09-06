@@ -21,14 +21,16 @@ enum AddrMode {
 
 class Instr {
 	private:
+		bool cont;
 
 	public:
 		enum AddrMode m_addrMode;
 		std::string m_name;
-		Instr(AddrMode addrMode, std::string name) : m_addrMode(addrMode), m_name(name) {};
+		Instr(AddrMode addrMode, std::string name, bool cont = true) : cont(cont), m_addrMode(addrMode), m_name(name) {};
 		virtual ~Instr() {};
 		virtual std::string format();
 		virtual bool exp(asmjit::X86Assembler& assembler, MemoryMapper& m);
+		virtual bool stop_jit();
 };
 
 class NoArg : public Instr {
@@ -52,7 +54,7 @@ class BranchInstr : public Instr {
 		uint16_t target;
 		uint16_t next;
 	public:
-		BranchInstr(AddrMode addrMode, std::string name, uint16_t target, uint16_t next) : Instr(addrMode, name), target(target), next(next) {};
+		BranchInstr(AddrMode addrMode, std::string name, uint16_t target, uint16_t next) : Instr(addrMode, name, false), target(target), next(next) {};
 		template<class T> static std::unique_ptr<Instr> create(ParserPointer& pp);
 };
 
@@ -89,7 +91,7 @@ class JMPAbsInstr : public Instr {
 	private:
 	public:
 		uint16_t m_target;
-		JMPAbsInstr(uint16_t target) : Instr(AddrMode::ABSOLUTE, "JMP"), m_target(target) {};
+		JMPAbsInstr(uint16_t target) : Instr(AddrMode::ABSOLUTE, "JMP", false), m_target(target) {};
 		static std::unique_ptr<Instr> create(ParserPointer& pp);
 		std::string format();
 		bool exp(asmjit::X86Assembler& assembler, MemoryMapper& m);

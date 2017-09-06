@@ -1,5 +1,5 @@
 project(
-	'jit', 'cpp',
+	'jit', ['cpp', 'c'],
 	version : '1.0.0',
 	license : 'GPL',
 	default_options : [
@@ -12,6 +12,7 @@ add_global_arguments('-fpermissive', language : 'cpp')
 
 asmjit_dep = dependency('asmjit')
 fmt_dep = dependency('fmt', static: true)
+thread_dep = dependency('threads')
 
 subdir('include')
 subdir('src')

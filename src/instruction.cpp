@@ -5,7 +5,6 @@
 
 #define REG_SP asmjit::x86::r10b
 #define REG_S  asmjit::x86::r11b
-#define REG_PC asmjit::x86::r12w
 #define REG_A  asmjit::x86::r13b
 #define REG_X  asmjit::x86::r14b
 #define REG_Y  asmjit::x86::r15b
@@ -43,6 +42,10 @@ static void emitDump(asmjit::X86Assembler& a) {
 
 std::string Instr::format() {
 	return fmt::format("{}", this->m_name);
+}
+
+bool Instr::stop_jit() {
+	return !this->cont;
 }
 
 std::unique_ptr<Instr> LDAImmInstr::create(ParserPointer& pp) {
@@ -113,7 +116,8 @@ bool JMPAbsInstr::exp(asmjit::X86Assembler& a, MemoryMapper& m) {
 	return false;
 }
 
-void virtual_push(asmjit::X86Assembler& a, MemoryMapper& m, auto value) {
+template<class T>
+void virtual_push(asmjit::X86Assembler& a, MemoryMapper& m, T value) {
 	a.mov(REG_TMP, 0x0100);
 	// @CLEANUP TMP is rax, but we can't or with a larger register
 	a.add(asmjit::x86::al, REG_SP);
@@ -121,7 +125,8 @@ void virtual_push(asmjit::X86Assembler& a, MemoryMapper& m, auto value) {
 	a.dec(REG_SP);
 }
 
-void virtual_pop(asmjit::X86Assembler& a, MemoryMapper& m, auto dst) {
+template<class T>
+void virtual_pop(asmjit::X86Assembler& a, MemoryMapper& m, T dst) {
 	a.inc(REG_SP);
 	a.mov(REG_TMP, 0x0100);
 	// @CLEANUP TMP is rax, but we can't or with a larger register
